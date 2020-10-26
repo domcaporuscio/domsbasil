@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UIViewController {
 
     var welcomeLabel: UILabel!
-    var info: UILabel!
     var spacer: CGFloat = 50
     var logo: UIImageView!
     var getStarted: UIButton!
@@ -42,9 +41,10 @@ class ViewController: UIViewController {
     
     //TODO: increase spacing between lines
     func setupInfo(){
-        info = UILabel(frame: CGRect(x: view.frame.minX + spacer, y: self.welcomeLabel.frame.maxY, width: view.frame.width - 2*spacer, height: 100))
-        info.text = "> Learn how to plant basil like Dom\n> Buy Dom's Basil Seeds\n> Connect with Basil Lovers"
-        info.font = UIFont.systemFont(ofSize: 25)
+        var info: UILabel!
+        info = UILabel(frame: CGRect(x: view.frame.minX + spacer, y: self.welcomeLabel.frame.maxY, width: view.frame.width - 2*spacer, height: 200))
+        info.text = "Learn how to plant basil like Dom\n\nBuy Dom's Basil Seeds\n\nConnect with Basil Lovers"
+        info.font = UIFont.systemFont(ofSize: 22)
         info.adjustsFontSizeToFitWidth = true
         info.numberOfLines = -1
         info.textColor = .black
@@ -59,11 +59,13 @@ class ViewController: UIViewController {
         getStarted.titleLabel?.font = UIFont.systemFont(ofSize: 25)
         getStarted.backgroundColor = .black
         getStarted.setTitleColor(.white, for: .normal)
-        //TODO: go to next screen
-        //getStarted.addTarget(self, action: #selector(<#T##@objc method#>), for: .touchUpInside)
+        getStarted.addTarget(self, action: #selector(pressedGetStarted), for: .touchUpInside)
         self.view.addSubview(getStarted)
     }
 
+    @objc func pressedGetStarted(){
+        print("pressed button")
+    }
 
 }
 
