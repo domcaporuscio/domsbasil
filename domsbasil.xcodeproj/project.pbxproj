@@ -16,6 +16,7 @@
 		5C36305E25468CC800D1858C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C36305C25468CC800D1858C /* LaunchScreen.storyboard */; };
 		5C36306925468CC900D1858C /* domsbasilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36306825468CC900D1858C /* domsbasilTests.swift */; };
 		5C36307425468CC900D1858C /* domsbasilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36307325468CC900D1858C /* domsbasilUITests.swift */; };
+		5C36309C2547153200D1858C /* logo_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C36309B2547153200D1858C /* logo_transparent.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5C36306F25468CC900D1858C /* domsbasilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = domsbasilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C36307325468CC900D1858C /* domsbasilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domsbasilUITests.swift; sourceTree = "<group>"; };
 		5C36307525468CC900D1858C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C36309B2547153200D1858C /* logo_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_transparent.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				5C36305C25468CC800D1858C /* LaunchScreen.storyboard */,
 				5C36305F25468CC800D1858C /* Info.plist */,
 				5C36305725468CC500D1858C /* domsbasil.xcdatamodeld */,
+				5C36309B2547153200D1858C /* logo_transparent.png */,
 			);
 			path = domsbasil;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C36305E25468CC800D1858C /* LaunchScreen.storyboard in Resources */,
+				5C36309C2547153200D1858C /* logo_transparent.png in Resources */,
 				5C36305B25468CC800D1858C /* Assets.xcassets in Resources */,
 				5C36305625468CC500D1858C /* Main.storyboard in Resources */,
 			);
