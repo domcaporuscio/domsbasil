@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  welcomeScreen.swift
 //  domsbasil
 //
 //  Created by Dominic Caporuscio on 10/26/20.
@@ -7,11 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class welcomeScreen: UIViewController {
 
     var welcomeLabel: UILabel!
     var spacer: CGFloat = 50
     var getStarted: UIButton!
+    var basil: UIImageView!
+    var dom: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +22,15 @@ class ViewController: UIViewController {
         setupWelcomeLabel()
         setupInfo()
         setupGetStarted()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(willBecomeActive), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
     func setupLogo() {
-        var basil: UIImageView!
         basil = UIImageView(frame: CGRect(x: view.frame.minX + 2*spacer, y: view.frame.minY + spacer, width: view.frame.width - 4*spacer, height: view.frame.width - 4*spacer))
         basil.image = UIImage(named: "justbasil")
         self.view.addSubview(basil)
-        basil.rotate(duration: 32)
-        var dom: UIImageView!
         dom = UIImageView(frame: CGRect(x: basil.frame.minX, y: basil.frame.minY, width: basil.frame.width, height: basil.frame.height))
         dom.image = UIImage(named: "justdom")
         self.view.addSubview(dom)
@@ -38,7 +40,7 @@ class ViewController: UIViewController {
     func setupWelcomeLabel() {
         welcomeLabel = UILabel(frame: CGRect(x: view.frame.minX + spacer, y: view.frame.midY - 200, width: view.frame.width - 2*spacer, height: 100))
         welcomeLabel.text = "Welcome to Dom's Basil"
-        welcomeLabel.font = UIFont.boldSystemFont(ofSize: 40)
+        welcomeLabel.font = UIFont.boldSystemFont(ofSize: 43)
         welcomeLabel.adjustsFontSizeToFitWidth = true;
         welcomeLabel.textColor = .black
         welcomeLabel.textAlignment = .center
@@ -115,6 +117,22 @@ class ViewController: UIViewController {
         print("pressed button")
     }
 
+    // The app entered the background
+    @objc func willResignActive(_ notification: Notification) {
+        // Stop rotating the basil logo
+        if basil != nil{
+            basil.stopRotating()
+        }
+    }
+    
+    // The app appeared from the background
+    @objc func willBecomeActive(_ notification: Notification) {
+        // Rotate the basil logo
+        if basil != nil{
+            basil.rotate(duration: 60)
+        }
+    }
+    
 }
 
 // Credit: https://stackoverflow.com/questions/9844925/uiview-infinite-360-degree-rotation-animation/26215725

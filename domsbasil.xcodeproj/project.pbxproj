@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C36304F25468CC500D1858C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36304E25468CC500D1858C /* AppDelegate.swift */; };
 		5C36305125468CC500D1858C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36305025468CC500D1858C /* SceneDelegate.swift */; };
-		5C36305325468CC500D1858C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36305225468CC500D1858C /* ViewController.swift */; };
+		5C36305325468CC500D1858C /* welcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36305225468CC500D1858C /* welcomeScreen.swift */; };
 		5C36305625468CC500D1858C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C36305425468CC500D1858C /* Main.storyboard */; };
 		5C36305925468CC500D1858C /* domsbasil.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C36305725468CC500D1858C /* domsbasil.xcdatamodeld */; };
 		5C36305B25468CC800D1858C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C36305A25468CC800D1858C /* Assets.xcassets */; };
@@ -40,7 +40,7 @@
 		5C36304B25468CC500D1858C /* domsbasil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = domsbasil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C36304E25468CC500D1858C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C36305025468CC500D1858C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5C36305225468CC500D1858C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5C36305225468CC500D1858C /* welcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeScreen.swift; sourceTree = "<group>"; };
 		5C36305525468CC500D1858C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C36305825468CC500D1858C /* domsbasil.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = domsbasil.xcdatamodel; sourceTree = "<group>"; };
 		5C36305A25468CC800D1858C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			children = (
 				5C36304E25468CC500D1858C /* AppDelegate.swift */,
 				5C36305025468CC500D1858C /* SceneDelegate.swift */,
-				5C36305225468CC500D1858C /* ViewController.swift */,
+				5C36305225468CC500D1858C /* welcomeScreen.swift */,
 				5C36305425468CC500D1858C /* Main.storyboard */,
 				5C36305A25468CC800D1858C /* Assets.xcassets */,
 				5C36305C25468CC800D1858C /* LaunchScreen.storyboard */,
@@ -266,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C36305925468CC500D1858C /* domsbasil.xcdatamodeld in Sources */,
-				5C36305325468CC500D1858C /* ViewController.swift in Sources */,
+				5C36305325468CC500D1858C /* welcomeScreen.swift in Sources */,
 				5C36304F25468CC500D1858C /* AppDelegate.swift in Sources */,
 				5C36305125468CC500D1858C /* SceneDelegate.swift in Sources */,
 			);
