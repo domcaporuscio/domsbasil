@@ -23,8 +23,79 @@
             </objects>
             <point key="canvasLocation" x="-197" y="85"/>
         </scene>
+        <!--Connect-->
+        <scene sceneID="yas-hM-kac">
+            <objects>
+                <viewController id="Rs6-Qw-KyR" customClass="connectVC" customModule="domsbasil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MYz-4N-Ti5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="eWP-D3-C93"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Connect" image="person.3.fill" catalog="system" id="thI-ZD-iPi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fK-5x-2rk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1593" y="857"/>
+        </scene>
+        <!--Buy-->
+        <scene sceneID="jmQ-SV-52H">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ej1-mq-B8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="hIO-Dz-yFX" customClass="buyVC" customModule="domsbasil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Moz-Aa-lE2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wXu-TW-0Rc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Buy" image="oval.fill" catalog="system" id="3Zb-Nq-J6a"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1593" y="192"/>
+        </scene>
+        <!--Learn-->
+        <scene sceneID="WrR-No-7mq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGP-bS-EDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="e8Z-eB-W8g" customClass="learnVC" customModule="domsbasil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yam-KY-yNy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2zd-ez-FDn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Learn" image="leaf.fill" catalog="system" id="iOW-KH-2l9"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1593" y="-452"/>
+        </scene>
+        <!--tabbar-->
+        <scene sceneID="O28-xm-buh">
+            <objects>
+                <tabBarController storyboardIdentifier="tabbar" title="tabbar" id="4R7-vD-gve" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="U2D-rz-JVq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.27058823529999998" green="0.94117647059999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="e8Z-eB-W8g" kind="relationship" relationship="viewControllers" id="2CW-Kx-8mw"/>
+                        <segue destination="hIO-Dz-yFX" kind="relationship" relationship="viewControllers" id="U5Q-WV-Vk0"/>
+                        <segue destination="Rs6-Qw-KyR" kind="relationship" relationship="viewControllers" id="wJv-Lt-733"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="02S-kJ-20s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="623" y="-90"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="leaf.fill" catalog="system" width="128" height="106"/>
+        <image name="oval.fill" catalog="system" width="128" height="96"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -17,6 +17,10 @@
 		5C36306925468CC900D1858C /* domsbasilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36306825468CC900D1858C /* domsbasilTests.swift */; };
 		5C36307425468CC900D1858C /* domsbasilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36307325468CC900D1858C /* domsbasilUITests.swift */; };
 		5C36309C2547153200D1858C /* logo_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C36309B2547153200D1858C /* logo_transparent.png */; };
+		5C3630B32547612400D1858C /* tabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3630B22547612400D1858C /* tabBarController.swift */; };
+		5C3630B82547616600D1858C /* learnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3630B72547616600D1858C /* learnVC.swift */; };
+		5C3630BD254762CE00D1858C /* buyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3630BC254762CE00D1858C /* buyVC.swift */; };
+		5C3630C2254762E300D1858C /* connectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3630C1254762E300D1858C /* connectVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		5C36307325468CC900D1858C /* domsbasilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = domsbasilUITests.swift; sourceTree = "<group>"; };
 		5C36307525468CC900D1858C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C36309B2547153200D1858C /* logo_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_transparent.png; sourceTree = "<group>"; };
+		5C3630B22547612400D1858C /* tabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBarController.swift; sourceTree = "<group>"; };
+		5C3630B72547616600D1858C /* learnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learnVC.swift; sourceTree = "<group>"; };
+		5C3630BC254762CE00D1858C /* buyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buyVC.swift; sourceTree = "<group>"; };
+		5C3630C1254762E300D1858C /* connectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connectVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,10 @@
 				5C36304E25468CC500D1858C /* AppDelegate.swift */,
 				5C36305025468CC500D1858C /* SceneDelegate.swift */,
 				5C36305225468CC500D1858C /* welcomeScreen.swift */,
+				5C3630B22547612400D1858C /* tabBarController.swift */,
+				5C3630B72547616600D1858C /* learnVC.swift */,
+				5C3630BC254762CE00D1858C /* buyVC.swift */,
+				5C3630C1254762E300D1858C /* connectVC.swift */,
 				5C36305425468CC500D1858C /* Main.storyboard */,
 				5C36305A25468CC800D1858C /* Assets.xcassets */,
 				5C36305C25468CC800D1858C /* LaunchScreen.storyboard */,
@@ -266,7 +278,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C36305925468CC500D1858C /* domsbasil.xcdatamodeld in Sources */,
+				5C3630BD254762CE00D1858C /* buyVC.swift in Sources */,
 				5C36305325468CC500D1858C /* welcomeScreen.swift in Sources */,
+				5C3630B32547612400D1858C /* tabBarController.swift in Sources */,
+				5C3630B82547616600D1858C /* learnVC.swift in Sources */,
+				5C3630C2254762E300D1858C /* connectVC.swift in Sources */,
 				5C36304F25468CC500D1858C /* AppDelegate.swift in Sources */,
 				5C36305125468CC500D1858C /* SceneDelegate.swift in Sources */,
 			);

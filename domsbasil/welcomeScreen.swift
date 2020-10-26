@@ -115,6 +115,14 @@ class welcomeScreen: UIViewController {
 
     @objc func pressedGetStarted(){
         print("pressed button")
+//        let newvc = learnVC()
+//        newvc.modalPresentationStyle = .fullScreen
+//        self.navigationController?.pushViewController(newvc, animated: true)
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "tabbar") as! UITabBarController
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(newViewController, animated: true, completion: nil)
     }
 
     // The app entered the background
