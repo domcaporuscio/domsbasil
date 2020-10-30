@@ -9,12 +9,21 @@ import UIKit
 
 class buyVC: UIViewController {
 
+    var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupTitleLabel()
     }
     
+    func setupTitleLabel(){
+        label = UILabel(frame: CGRect(x: view.frame.minX, y: view.frame.minY + 54, width: view.frame.width, height: 45))
+        label.textAlignment = .center
+        label.text = "Buy"
+        self.view.addSubview(label)
+        //label.backgroundColor = .red
+        label.font = UIFont.boldSystemFont(ofSize: 25)
+    }
 
     /*
     // MARK: - Navigation

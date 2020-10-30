@@ -17,7 +17,9 @@ class welcomeScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //TODO: Add gradient
         self.view.backgroundColor = UIColor.init(red: 69/255, green: 240/255, blue: 69/255, alpha: 1)
+        setGradientBackground()
         setupLogo()
         setupWelcomeLabel()
         setupInfo()
@@ -25,6 +27,17 @@ class welcomeScreen: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: UIApplication.didEnterBackgroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(willBecomeActive), name: UIApplication.willEnterForegroundNotification, object: nil)
+    }
+    
+    func setGradientBackground() {
+        let colorTop = UIColor(red: 69/255, green: 240/255, blue: 69/255, alpha: 1).cgColor
+        let colorBottom = UIColor(red: 9/255.0, green: 199/255.0, blue: 9/255.0, alpha: 1.0).cgColor
+        //UIColor(red: 0/255.0, green: 212/255.0, blue: 255/255.0, alpha: 1.0).cgColor
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = self.view.bounds
+        self.view.layer.insertSublayer(gradientLayer, at:0)
     }
     
     func setupLogo() {
@@ -40,7 +53,7 @@ class welcomeScreen: UIViewController {
     func setupWelcomeLabel() {
         welcomeLabel = UILabel(frame: CGRect(x: view.frame.minX + spacer, y: view.frame.midY - 200, width: view.frame.width - 2*spacer, height: 100))
         welcomeLabel.text = "Welcome to Dom's Basil"
-        welcomeLabel.font = UIFont.boldSystemFont(ofSize: 43)
+        welcomeLabel.font = UIFont.boldSystemFont(ofSize: 45)
         welcomeLabel.adjustsFontSizeToFitWidth = true;
         welcomeLabel.textColor = .black
         welcomeLabel.textAlignment = .center
@@ -54,7 +67,7 @@ class welcomeScreen: UIViewController {
         
         var learn: UILabel!
         learn = UILabel(frame: CGRect(x: view.frame.minX + spacer, y: self.welcomeLabel.frame.maxY, width: view.frame.width - 2*spacer, height: labelHeight))
-        learn.text = "Learn how to plant basil like Dom"
+        learn.text = "Grow Healthy Basil"//"Learn how to plant basil like Dom"
         learn.font = UIFont.systemFont(ofSize: 22)
         learn.adjustsFontSizeToFitWidth = true
         learn.numberOfLines = 1
@@ -65,7 +78,7 @@ class welcomeScreen: UIViewController {
         
         var buy: UILabel!
         buy = UILabel(frame: CGRect(x: view.frame.minX + spacer, y: learn.frame.maxY + labelSpacer, width: view.frame.width - 2*spacer, height: labelHeight))
-        buy.text = "Buy Dom's Basil Seeds\n\nConnect with Basil Lovers"
+        buy.text = "Start From Basil Seeds"//"Buy Dom's Basil Seeds\n\nConnect with Basil Lovers"
         buy.font = UIFont.systemFont(ofSize: 22)
         buy.adjustsFontSizeToFitWidth = true
         buy.numberOfLines = 1
@@ -76,7 +89,7 @@ class welcomeScreen: UIViewController {
         
         var connect: UILabel!
         connect = UILabel(frame: CGRect(x: view.frame.minX + spacer, y: buy.frame.maxY + labelSpacer, width: view.frame.width - 2*spacer, height: labelHeight))
-        connect.text = "Connect with Basil Lovers"
+        connect.text = "Connect With Basil Growers"
         connect.font = UIFont.systemFont(ofSize: 22)
         connect.adjustsFontSizeToFitWidth = true
         connect.numberOfLines = 1
@@ -137,7 +150,7 @@ class welcomeScreen: UIViewController {
     @objc func willBecomeActive(_ notification: Notification) {
         // Rotate the basil logo
         if basil != nil{
-            basil.rotate(duration: 60)
+            basil.rotate(duration: 699)
         }
     }
     
