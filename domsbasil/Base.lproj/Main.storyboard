@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EFj-r1-Khb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="85"/>
+            <point key="canvasLocation" x="-65" y="-90"/>
         </scene>
         <!--Connect-->
         <scene sceneID="yas-hM-kac">
@@ -42,7 +42,6 @@
         <!--Buy-->
         <scene sceneID="jmQ-SV-52H">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ej1-mq-B8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="hIO-Dz-yFX" customClass="buyVC" customModule="domsbasil" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Moz-Aa-lE2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -52,13 +51,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Buy" image="oval.fill" catalog="system" id="3Zb-Nq-J6a"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ej1-mq-B8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1593" y="192"/>
         </scene>
         <!--Learn-->
         <scene sceneID="WrR-No-7mq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jGP-bS-EDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="e8Z-eB-W8g" customClass="learnVC" customModule="domsbasil" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yam-KY-yNy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -68,8 +67,24 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Learn" image="leaf.fill" catalog="system" id="iOW-KH-2l9"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGP-bS-EDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1593" y="-452"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="5Yi-w3-ZUc">
+            <objects>
+                <viewController id="EFj-r1-Khb" customClass="GameViewController" customModule="domsbasil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rqg-N0-EQz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2yi-DU-Anj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9n2-27-Ayi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="-771"/>
         </scene>
         <!--tabbar-->
         <scene sceneID="O28-xm-buh">
