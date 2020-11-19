@@ -13,28 +13,29 @@ class GameScene: SKScene {
     weak var viewController: GameViewController?
     
     var dom: SKSpriteNode!
+    var basils: [SKSpriteNode]?
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-
-    override init() {
-        super.init()
-        setup()
-    }
-
-    override init(size: CGSize) {
-        super.init(size: size)
-        setup()
-    }
-
-    func setup()
-    {
-        // PUT YOUR CODE HERE
-        print("Setup...")
-        createDom()
-    }
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        setup()
+//    }
+//
+//    override init() {
+//        super.init()
+//        setup()
+//    }
+//
+//    override init(size: CGSize) {
+//        super.init(size: size)
+//        setup()
+//    }
+//
+//    func setup()
+//    {
+//        // PUT YOUR CODE HERE
+//        print("Setup...")
+//        createDom()
+//    }
 //    override init() {
 //        super.init()
 //    }
@@ -48,11 +49,14 @@ class GameScene: SKScene {
 //    }
 //
 //
-//    override func didMove(to view: SKView) {
-//        print("At scene.")
-//        backgroundColor = UIColor.init(red: 0/255, green: 255/255, blue: 0/255, alpha: 1.0)
-//        createDom()
-//    }
+    override func didMove(to view: SKView) {
+        print("At scene.")
+        backgroundColor = UIColor.init(red: 52/255, green: 56/255, blue: 79/255, alpha: 1.0)
+        createDom()
+        basils = [SKSpriteNode]()
+        spawnBasil()
+        
+    }
     
     func createDom(){
         dom = SKSpriteNode(imageNamed: "dom_head")
@@ -78,8 +82,46 @@ class GameScene: SKScene {
             let position = touch.location(in: self)
             if nodes(at: position).contains(dom){
                 dom.position.x = position.x
+                dom.position.y = position.y
+                
+                // create path and line
+                let p = CGMutablePath()
+                p.move(to: dom.position)
+                p.addLine(to: basils![0].position)
+                let line = SKShapeNode(path: p)
+                line.name = "line"
+                self.enumerateChildNodes(withName: "line") { (node, stop) in
+                    node.removeFromParent()
+                }
+                addChild(line)
+                
+                // calculate distance
+                let d = sqrt(line.frame.width*line.frame.width + line.frame.height*line.frame.height)/10
+                
+                // make label
+                let label = SKLabelNode(text: "Distance: \(Int(d))")
+                label.name = "label"
+                label.position = CGPoint(x: line.frame.midX, y: line.frame.midY)
+                self.enumerateChildNodes(withName: "label") { (node, stop) in
+                    node.removeFromParent()
+                }
+                addChild(label)
             }
         }
+    }
+    
+    func spawnBasil(){
+        //let basil = Basil(size: CGSize(width: 100, height: 100))
+        let basil = SKSpriteNode(imageNamed: "justbasil")
+        addChild(basil)
+        basils!.append(basil)
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        //let distance = sqrt(  )
+//        print("Update")
+//        path.move(to: dom.position)
+//        energyLine = SKShapeNode(path: path)
     }
     
 }
