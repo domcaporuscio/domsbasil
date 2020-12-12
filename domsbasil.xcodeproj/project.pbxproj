@@ -11,6 +11,7 @@
 		5C299669256633AB0002BB5F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C299668256633AB0002BB5F /* GameViewController.swift */; };
 		5C29966E25663E6E0002BB5F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5C29966D25663E6E0002BB5F /* GameScene.sks */; };
 		5C2996792566B7380002BB5F /* Basil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2996782566B7370002BB5F /* Basil.swift */; };
+		5C310980258492B2002B9EE1 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C31097F258492B2002B9EE1 /* CustomCell.swift */; };
 		5C36304F25468CC500D1858C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36304E25468CC500D1858C /* AppDelegate.swift */; };
 		5C36305125468CC500D1858C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36305025468CC500D1858C /* SceneDelegate.swift */; };
 		5C36305325468CC500D1858C /* welcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C36305225468CC500D1858C /* welcomeScreen.swift */; };
@@ -49,6 +50,7 @@
 		5C299668256633AB0002BB5F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5C29966D25663E6E0002BB5F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5C2996782566B7370002BB5F /* Basil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basil.swift; sourceTree = "<group>"; };
+		5C31097F258492B2002B9EE1 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		5C36304B25468CC500D1858C /* domsbasil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = domsbasil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C36304E25468CC500D1858C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C36305025468CC500D1858C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				5C36305225468CC500D1858C /* welcomeScreen.swift */,
 				5C3630B22547612400D1858C /* tabBarController.swift */,
 				5C3630B72547616600D1858C /* learnVC.swift */,
+				5C31097F258492B2002B9EE1 /* CustomCell.swift */,
 				5C3630BC254762CE00D1858C /* buyVC.swift */,
 				5C299663256632AF0002BB5F /* GameScene.swift */,
 				5C2996782566B7370002BB5F /* Basil.swift */,
@@ -300,6 +303,7 @@
 				5C3630B82547616600D1858C /* learnVC.swift in Sources */,
 				5C3630C2254762E300D1858C /* connectVC.swift in Sources */,
 				5C36304F25468CC500D1858C /* AppDelegate.swift in Sources */,
+				5C310980258492B2002B9EE1 /* CustomCell.swift in Sources */,
 				5C36305125468CC500D1858C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

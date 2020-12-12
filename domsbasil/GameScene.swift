@@ -14,44 +14,12 @@ class GameScene: SKScene {
     
     var dom: SKSpriteNode!
     var basils: [SKSpriteNode]?
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        setup()
-//    }
-//
-//    override init() {
-//        super.init()
-//        setup()
-//    }
-//
-//    override init(size: CGSize) {
-//        super.init(size: size)
-//        setup()
-//    }
-//
-//    func setup()
-//    {
-//        // PUT YOUR CODE HERE
-//        print("Setup...")
-//        createDom()
-//    }
-//    override init() {
-//        super.init()
-//    }
-//
-//    required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//
-//    override init(size: CGSize) {
-//        super.init(size: size)
-//    }
-//
-//
+ 
     override func didMove(to view: SKView) {
         print("At scene.")
-        backgroundColor = UIColor.init(red: 52/255, green: 56/255, blue: 79/255, alpha: 1.0)
+        view.frame = CGRect(x: 0, y: 0, width: 400, height: 300)
+        view.backgroundColor = .orange
+        //backgroundColor = UIColor.init(red: 52/255, green: 56/255, blue: 79/255, alpha: 1.0)
         createDom()
         basils = [SKSpriteNode]()
         spawnBasil()
@@ -71,18 +39,31 @@ class GameScene: SKScene {
     
     func moveDom(toPosition: CGFloat){
         dom.position.x = toPosition
+        print("sometning")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         //print("Touched screen")
     }
     
+    let maxLength: CGFloat = 300
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
             let position = touch.location(in: self)
-            if nodes(at: position).contains(dom){
-                dom.position.x = position.x
-                dom.position.y = position.y
+            //if nodes(at: position).contains(dom){
+                
+                if(sqrt(position.x*position.x + position.y*position.y) < maxLength){
+                    dom.position.x = position.x
+                    dom.position.y = position.y
+                }
+                else {
+                    let angle = (tan(position.x/position.y) * 180) / .pi
+                    //dom.position.x = maxLength * sin(.pi / 180)
+                    //dom.position.y = position.y
+                }
+                //print(sqrt(position.x*position.x + position.y*position.y))
+            let angle = (tan(position.x/position.y) * 180) / .pi
+            print("angle: \(angle), x: \(position.x), y: \(position.y)")
                 
                 // create path and line
                 let p = CGMutablePath()
@@ -106,7 +87,7 @@ class GameScene: SKScene {
                     node.removeFromParent()
                 }
                 addChild(label)
-            }
+            //}
         }
     }
     

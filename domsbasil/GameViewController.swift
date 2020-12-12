@@ -28,6 +28,7 @@ class GameViewController: UIViewController {
                 // set the scale mode to fit the window
                 scene.scaleMode = .aspectFill
                 
+                
                 print("Presenting GameScene...")
                 // present the scene
                 view.presentScene(scene)
@@ -42,7 +43,7 @@ class GameViewController: UIViewController {
         }
         
         setupSlider()
-
+        
     }
     
     func setupSlider(){
@@ -61,9 +62,6 @@ class GameViewController: UIViewController {
         
         currentGame?.moveDom(toPosition: x)
     }
-    
-    
-    
     
 
     /*
